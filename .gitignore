@@ -1,3 +1,6 @@
 *.pyc
 gcc*
 test/*
+software/producer/build/*
+*cache*
+*.m4
