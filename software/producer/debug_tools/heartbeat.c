@@ -332,7 +332,7 @@ int main(int argc, char *argv[]) {
   timer.it_value.tv_sec = 5;
   timer.it_value.tv_usec = 0;
   /* ... and every 10 secs after that. */
-  timer.it_interval.tv_sec = 5;
+  timer.it_interval.tv_sec = 60;
   timer.it_interval.tv_usec = 0;
 
   /* Start a real timer. It counts down whenever this process is
