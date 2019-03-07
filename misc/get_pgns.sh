@@ -7,9 +7,7 @@ if [ $? != 0 ]; then
 	PROCESS_NUM=$(ps -ef | grep "dhclient" | grep -v "grep" | wc -l)
 	if [ $PROCESS_NUM -eq 0 ]; then
 		echo 'network is down, and no dhclient running ... will try restarting the cell network'
-		qmicli -p -d /dev/cdc-wdm0 --wds-start-network=Broadband --client-no-release-cid
-		dhclient wwan0
-    sleep 30
+    systemctl restart reconnect-cell
 	fi
 	exit 1
 fi
