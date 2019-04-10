@@ -1,5 +1,5 @@
 /*
- * CAN Activity Watchdog 
+ * CAN Activity Watchdog
  *
  * Author: Yang Wang <wang701@purdue.edu>
  *
@@ -52,7 +52,7 @@ void timer_handler(int signum) {
 		printf("No CAN activity in 1 min. Shutting down the ISOBlue...\n");
 #endif
 		system("echo on > sys/bus/usb/devices/usb2/power/control"); // prevent system from autosuspend usb
-		system("echo mem > /sys/power/state");
+		system("systemctl suspend");
 	} else {
 		/* Clear the count */
 		frame_cnt = 0;
@@ -130,7 +130,7 @@ int main(int argc, char *argv[]) {
 			}
 			continue;
 		}
-	
+
 		/* Increase the count if there is CAN activity */
 		frame_cnt++;
 	}
