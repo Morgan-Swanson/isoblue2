@@ -7,8 +7,8 @@ if [ $? != 0 ]; then
 	PROCESS_NUM=$(ps -ef | grep "dhclient" | grep -v "grep" | wc -l)
 	if [ $PROCESS_NUM -eq 0 ]; then
 		echo 'network is down, and no dhclient running ... will try restarting the cell network'
-    systemctl restart reconnect-cell
 	fi
+  systemctl restart reconnect-cell
 	exit 1
 fi
 
