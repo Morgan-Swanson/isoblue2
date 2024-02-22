@@ -2,7 +2,7 @@ PROPERTY="log.retention.hours"
 NEW_VALUE="-1"
 
 # Path to the server.properties file
-CONFIG_FILE="/path/to/kafka/config/server.properties"
+CONFIG_FILE="/opt/kafka_2.11-0.10.1.0/config/server.properties"
 
 # Check if the property already exists in the file
 if grep -q "^$PROPERTY" "$CONFIG_FILE"; then
