@@ -12,3 +12,4 @@ else
     # Property does not exist, so add it to the end of the file
     echo "$PROPERTY=$NEW_VALUE" >> "$CONFIG_FILE"
 fi
+
