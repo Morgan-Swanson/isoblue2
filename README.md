@@ -7,7 +7,7 @@ I built some docker and bash scripts to extract the data, which is stored in an 
 
 1. Install python-kafka and avro
 2. Download some data from the link above
-3. Run dump_can.sh <path-to-data-dir>
+3. Run dump_can.sh path-to-data-dir
 
 ## To Do
 
